@@ -1,6 +1,8 @@
 
 import indexCliente from './components/indexCliente.vue';
 import editCliente from './components/editCliente.vue';
+import indexMascota from './components/indexMascota.vue';
+import editMascota from './components/editMascota.vue';
 import { createRouter, createWebHistory } from "vue-router";
 
 const ROUTES = {
@@ -13,6 +15,16 @@ const ROUTES = {
     path: '/editar/:id',
     name: 'editCliente',
     component: editCliente
+  },
+  mascota: {
+    path: '/mascota',
+    name: 'indexMascota',
+    component: indexMascota
+  },
+  editMascota: {
+    path: '/editarmascota/:id',
+    name: 'editMascota',
+    component: editMascota
   }
 }
 const router = createRouter({
@@ -29,6 +41,16 @@ const router = createRouter({
       path: ROUTES.NewRoutePage.path,
       name: ROUTES.NewRoutePage.name,
       component: ROUTES.NewRoutePage.component
+    },
+    {
+      path: ROUTES.mascota.path,
+      name: ROUTES.mascota.name,
+      component: ROUTES.mascota.component
+    },
+    {
+      path: ROUTES.editMascota.path,
+      name: ROUTES.editMascota.name,
+      component: ROUTES.editMascota.component
     },
   ]
 });
